@@ -39,14 +39,14 @@ export default NextAuth({
             q.Get(
               q.Match(
                 q.Index('user_by_email'),
-                  q.Casefold(user.email),
-
+                q.Casefold(user.email)
               )
             )
           )
         )
         return true
-      } catch  {
+      } catch (err) {
+        console.error(err)
         return false
       }
 
