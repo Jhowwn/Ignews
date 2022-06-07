@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import Posts, { getStaticProps } from '../../pages/posts'
-import { stripe } from '../../services/stripe'
 import { getPrismicClient } from '../../services/prismic'
 
 jest.mock('../../services/stripe')
